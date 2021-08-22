@@ -13,11 +13,11 @@ body {
     color: #fff;
     -webkit-font-smoothing: antialiased;
 }
-body, input, button {
-    font-family: 'Roboto Slab', serif;
+body, input, button, strong, p  {
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
-h1, h2, h3, h4, h5, h6, strong {
+h1, h2, h3, h4, h5, h6, strong, p {
     font-weight: 500;
 }
 button {
