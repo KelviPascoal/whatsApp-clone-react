@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.li`
   height: 72px;
-  border-bottom: #ffffff18 solid 1px;
+  border-bottom: var(--divise-chat) solid 1px;
 
   display: flex;
   align-items: center;

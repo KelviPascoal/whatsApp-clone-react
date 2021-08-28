@@ -1,22 +1,36 @@
+import { useState } from "react";
 import { Avatar } from "../Avatar";
 import { Container, ContainerUlChatr, ChatInfo } from "./styles";
 
-export function CardChat() {
+interface ICardChatProps {
+    contacts: IContacts[];
+}
+
+interface IContacts {
+    id: number;
+    profilePhoto: string; 
+    name: string;
+    lastMessage: string; 
+    lastMessageHour: string;
+}
+
+export function CardChat({contacts}:ICardChatProps) {
 
     return (
-        <Container>
+        <>
+        {contacts.map((contact) => <Container key={contact.id}>
             <ContainerUlChatr>
                 <div>
-                    <Avatar />
+                    <Avatar photo={contact.profilePhoto}/>
                 </div>
 
                 <ChatInfo>
                     <div className="name-last-message">
-                        <strong>Erick gay</strong>
-                        <p> aaaaaaaaa </p>
+                        <strong>{contact.name}</strong>
+                        <p>{contact.lastMessage}</p>
                     </div>
-                    <div  className="hour">
-                        <span> 13:22</span>
+                    <div className="hour">
+                        <span>{contact.lastMessageHour}</span>
                     </div>
                 </ChatInfo>
 
@@ -26,5 +40,7 @@ export function CardChat() {
             </ContainerUlChatr>
 
         </Container>
+        )}
+        </>
     )
 }

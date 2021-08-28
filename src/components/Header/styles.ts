@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-  background-color: #2a2f32;
-  border-left: #ffffff18 solid 1px ;
+  background-color: var(--header);
+  border-left: var(--divise-header) solid 1px ;
   padding: 10px 16px;
   width: 100%;
   height: 59px;
